@@ -8,6 +8,7 @@ import { initScrollTextMotion } from "./scripts/scrollTextMotion.js";
 import { initServiceMotion } from "./scripts/serviceMotion.js";
 import { initTestimonialMotion } from "./scripts/testimonialMotion.js";
 import { initBlogMotion } from "./scripts/blogMotion.js";
+import { initCtaMotion } from "./scripts/ctaMotion.js";
 
 export default function App() {
   const [html, setHtml] = useState("");
@@ -119,6 +120,7 @@ export default function App() {
         initInfoMotion(document),
         initTestimonialMotion(document),
         initBlogMotion(document),
+        initCtaMotion(document),
       ];
       cleanup = () => {
         cleanups.forEach((cleanupItem) => cleanupItem());
