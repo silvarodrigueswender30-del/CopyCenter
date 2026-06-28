@@ -188,10 +188,9 @@ html.motion-ready .section_video .info-video_title {
 }
 
 /* Session 009: static fallback — neutralize IX2 invisible states for section_info. */
-html:not(.motion-ready) .section_info .home-info_title,
-html:not(.motion-ready) .section_info .home-info_image-wrap,
-html.motion-ready .section_info .home-info_title,
-html.motion-ready .section_info .home-info_image-wrap {
+html:not(.info-motion-ready) .section_info .home-info_title,
+html:not(.info-motion-ready) .section_info .home-info_image-wrap,
+html:not(.info-motion-ready) .section_info .home-info_card {
   opacity: 1 !important;
   filter: none !important;
   transform: none !important;

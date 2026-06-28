@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { initAboutCountingMotion } from "./scripts/aboutCountingMotion.js";
 import { initHeroMotion } from "./scripts/heroMotion.js";
+import { initInfoMotion } from "./scripts/infoMotion.js";
 import { initMobileNav } from "./scripts/mobileNav.js";
 import { initProcessMotion } from "./scripts/processMotion.js";
 import { initScrollTextMotion } from "./scripts/scrollTextMotion.js";
@@ -95,6 +96,7 @@ export default function App() {
         initServiceMotion(document),
         initProcessMotion(document),
         initAboutCountingMotion(document),
+        initInfoMotion(document),
       ];
       cleanup = () => {
         cleanups.forEach((cleanupItem) => cleanupItem());
