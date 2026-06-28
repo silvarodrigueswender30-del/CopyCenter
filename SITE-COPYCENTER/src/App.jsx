@@ -10,6 +10,7 @@ import { initTestimonialMotion } from "./scripts/testimonialMotion.js";
 import { initBlogMotion } from "./scripts/blogMotion.js";
 import { initCtaMotion } from "./scripts/ctaMotion.js";
 import { initFooterMotion } from "./scripts/footerMotion.js";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function App() {
   const [html, setHtml] = useState("");
@@ -130,8 +131,32 @@ export default function App() {
         initCtaMotion(document),
         initFooterMotion(document),
       ];
+      
+      const refresh = () => ScrollTrigger.refresh();
+      
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(refresh).catch(() => {});
+      }
+      
+      const images = document.querySelectorAll("img, video");
+      images.forEach((media) => {
+        if (media.tagName === "IMG" && !media.complete) {
+          media.addEventListener("load", refresh, { once: true });
+        } else if (media.tagName === "VIDEO" && media.readyState < 3) {
+          media.addEventListener("loadeddata", refresh, { once: true });
+        }
+      });
+
+      // Safeties for network latency on mobile
+      const timeouts = [
+        setTimeout(refresh, 500),
+        setTimeout(refresh, 1500),
+        setTimeout(refresh, 3000)
+      ];
+
       cleanup = () => {
         cleanups.forEach((cleanupItem) => cleanupItem());
+        timeouts.forEach(clearTimeout);
       };
     });
 
