@@ -205,8 +205,8 @@ html:not(.testimonial-motion-ready) .section_testimonial .home-testimonial_item 
 }
 
 /* Session 011: static fallback — neutralize IX2 invisible states for section_blog header. */
-html:not(.motion-ready) .section_blog .section_header,
-html.motion-ready .section_blog .section_header {
+html:not(.blog-motion-ready) .section_blog .section_header,
+html:not(.blog-motion-ready) .section_blog .collection-blogs_item {
   opacity: 1 !important;
   filter: none !important;
   transform: none !important;

@@ -7,6 +7,7 @@ import { initProcessMotion } from "./scripts/processMotion.js";
 import { initScrollTextMotion } from "./scripts/scrollTextMotion.js";
 import { initServiceMotion } from "./scripts/serviceMotion.js";
 import { initTestimonialMotion } from "./scripts/testimonialMotion.js";
+import { initBlogMotion } from "./scripts/blogMotion.js";
 
 export default function App() {
   const [html, setHtml] = useState("");
@@ -111,6 +112,7 @@ export default function App() {
         initAboutCountingMotion(document),
         initInfoMotion(document),
         initTestimonialMotion(document),
+        initBlogMotion(document),
       ];
       cleanup = () => {
         cleanups.forEach((cleanupItem) => cleanupItem());
