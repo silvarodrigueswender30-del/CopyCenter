@@ -1,0 +1,21 @@
+/* Original inline Webflow CSS extracted from Paridade/albadoe.webflow.io/index.html. */
+@media (min-width:992px) {
+            html.w-mod-js:not(.w-mod-ix) [data-w-id="090772c1-a265-3928-617c-acebad120f0b"] {
+                -webkit-transform: translate3d(0%, -630%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0%, -630%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0%, -630%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0%, -630%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+            }
+            html.w-mod-js:not(.w-mod-ix) [data-w-id="76c11b09-b14f-1ed4-fff4-d146aece610c"] {
+                -webkit-transform: translate3d(160%, -230%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(160%, -230%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(160%, -230%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(160%, -230%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+            }
+            html.w-mod-js:not(.w-mod-ix) [data-w-id="807be815-70d0-f1ac-5e03-02995c366692"] {
+                -webkit-transform: translate3d(-160%, -250%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(-160%, -250%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(-160%, -250%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(-160%, -250%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+            }
+        }

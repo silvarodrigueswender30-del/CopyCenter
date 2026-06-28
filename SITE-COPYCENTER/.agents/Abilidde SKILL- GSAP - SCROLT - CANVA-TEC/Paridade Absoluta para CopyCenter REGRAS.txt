@@ -1,0 +1,600 @@
+Paridade Absoluta para CopyCenter: 
+
+
+https://albadoe.webflow.io/
+
+-------- COMANDO DE DOWLOAD DE SKIL-AGENT PARIDADE -------
+
+MESTRE PRECISO DE UM COMANDO PARA DAR INICIO A ESSA PARIDADE DE PROJETO SEGUE A BIXO AS SKIL QUE MEU AGENTE DO CODEX DEVA BAIXAR PARA COMEÇARMOS A INICIAR A PARIDADE : 
+
+npx skills add https://github.com/greensock/gsap-skills --skill gsap-scrolltrigger
+npx skills add https://github.com/greensock/gsap-skills --skill gsap-plugins
+npx skills add https://github.com/greensock/gsap-skills --skill gsap-react
+npx skills add https://github.com/greensock/gsap-skills --skill gsap-performance
+
+Regra Asoluta : C:\Users\Teste\Downloads\CopyCenter\SITE-COPYCENTER\.agents\AGENTS_WEBFLOW_PARITY.md (Antes de qualquer linha de código ambos sitemas deva ler esse arquivo)
+Fluxo de trabalho para reduzirmos tokens:
+
+ANTIGRAVITY (análise e extração)
+  └── Lê o HTML/CSS/JS do Webflow
+  └── Gera arquivos de spec curtos e densos:
+        tokens.md     ← cores, tipografia, breakpoints
+        animations.md ← mapa de cada animação (trigger, easing, timing)
+        structure.md  ← hierarquia de seções e componentes
+
+VOCÊ (CHATGPT)
+  └── Revisa e aprova os specs
+  └── Prioriza o que o Codex vai atacar primeiro
+
+CODEX (execução)
+  └── Recebe apenas o spec da seção em trabalho
+  └── Nunca recebe o projeto inteiro, só o contexto necessário
+  └── Escreve código, você testa, ciclo fechado
+
+Regra de ouro para economizar token
+Nunca alimente o Codex com HTML bruto do Webflow. Sempre passe pelo filtro do Antigravity primeiro. Um arquivo tokens.md bem feito com 50 linhas vale mais do que 3000 linhas de CSS original.
+
+O que incluir no tokens.md que o Antigravity gera:
+## Cores
+--color-primary: #1A1A2E
+--color-accent: #E94560
+
+## Tipografia
+Heading 1: Neue Haas Grotesk, 72px/1.1, -0.03em, weight 700
+Body: Inter, 16px/1.6, 0, weight 400
+
+## Breakpoints
+Desktop: 1280px | Tablet: 991px | Mobile: 479px
+
+## Animações
+Hero title: SplitText chars, from opacity:0 y:40, stagger:0.03, ease:power2.out, trigger: page load
+Section 2: ScrollTrigger start:"top 80%" toggleActions:"play none none reverse"
+
+Isso é tudo que o Codex precisa. Sem ruído.
+
+* Outro ponto que gosto de trabalhar para manter essa excução mais precisa, trabalhar sessão por sessão e ter uma pasta interna dentro da raiz do projeto. (Isso é gestão de contexto profissional — cada sessão vira um checkpoint recuperável.)
+
+Estrutura de pasta recomendada:
+C:\Users\Teste\Downloads\CopyCenter\
+│
+├── _sessions\                          ← pasta de controle (nunca deployada)
+│   │
+│   ├── _rules\                         ← regras globais do projeto
+│   │   ├── AGENTS_WEBFLOW_PARITY.md    ← o arquivo que geramos
+│   │   ├── tokens.md                   ← cores, tipografia, breakpoints
+│   │   └── animations.md              ← mapa completo de animações
+│   │
+│   ├── session-001_auditoria\
+│   │   ├── RULES.md                    ← regras específicas desta sessão
+│   │   └── REPORT.md                  ← o que foi feito, problemas, decisões
+│   │
+│   ├── session-002_hero-section\
+│   │   ├── RULES.md
+│   │   └── REPORT.md
+│   │
+│   ├── session-003_scrolltrigger\
+│   │   ├── RULES.md
+│   │   └── REPORT.md
+│   │
+│   └── _status.md                      ← visão geral de todas as sessões
+│
+├── index.html
+├── css\
+├── js\
+└── images\
+
+*Template RULES.md de sessão:
+
+# SESSION-002 — Hero Section
+**Data:** 2025-01-15
+**Agente leitor:** Antigravity
+**Agente escritor:** Codex
+**Status:** EM EXECUÇÃO
+
+## Objetivo desta sessão
+Replicar o hero section com SplitText no título e
+ScrollTrigger no scroll indicator.
+
+## Arquivos em escopo
+- index.html (linhas 45–120)
+- css/webflow.css (classes: .hero-*, .nav-*)
+- js/animations.js
+
+## Fora de escopo desta sessão
+- Seções abaixo do fold
+- Menu mobile
+- Footer
+
+## Regras específicas
+- Preservar exatamente a classe .hero-wrapper
+- O título usa Neue Haas Grotesk 700, não substituir
+- Animação de entrada: chars, stagger 0.03, ease power2.out
+- NÃO mexer no nav ainda
+
+## Decisões tomadas
+- (preencher durante a sessão)
+
+## Bloqueios conhecidos
+- (preencher se aparecer)
+
+* Template REPORT.md de sessão:
+# REPORT — SESSION-002 — Hero Section
+**Data:** 2025-01-15
+**Agente leitor:** Antigravity
+**Agente escritor:** Codex
+**Status:** CONCLUÍDA ✅ / COM PROBLEMAS ⚠️ / BLOQUEADA ❌
+
+## O que foi executado
+- [ ] HTML do hero replicado
+- [ ] CSS integrado sem quebrar layout
+- [ ] SplitText implementado no h1
+- [ ] ScrollTrigger no scroll indicator
+
+## Problemas encontrados
+### Problema 1
+**Descrição:** SplitText quebrando em resize
+**Causa:** Faltou revert() + ResizeObserver
+**Solução aplicada:** Adicionado ResizeObserver com re-split
+
+## Arquivos modificados
+- src/components/Hero.jsx (criado)
+- src/styles/hero.css (criado)
+
+## Próxima sessão
+Depende desta: SIM
+O que falta antes de avançar: teste em mobile
+
+## Notas para o próximo agente
+- O .hero-wrapper tem position:sticky, não mudar
+- A fonte já está carregando via globals.css
+
+* Template _status.md 
+
+# STATUS GERAL DO PROJETO
+**Projeto:** CopyCenter
+**Última atualização:** 2025-01-15
+
+| Sessão | Escopo | Agente | Status |
+|--------|--------|--------|--------|
+| 001 | Auditoria completa | Antigravity | ✅ |
+| 002 | Hero section | Codex | ✅ |
+| 003 | ScrollTrigger geral | Codex | ⚠️ |
+| 004 | SplitText textos | Codex | 🔲 |
+| 005 | Mobile responsivo | Codex | 🔲 |
+
+## Bloqueios ativos
+- Nenhum
+
+## Decisões globais do projeto
+- Usar useGSAP() em todos os componentes React
+- ScrollTrigger.refresh() sempre após hydration Next.js
+
+*Prompt padrão para iniciar qualquer sessão
+Você pode dar esse prompt tanto pro Antigravity quanto pro Codex no início de cada sessão:
+
+Antes de executar qualquer tarefa:
+1. Leia _sessions/_rules/ para entender as regras globais
+2. Leia _sessions/_status.md para ver o estado atual do projeto
+3. Leia _sessions/session-[N]_[nome]/RULES.md desta sessão
+4. Execute apenas o que está em escopo desta sessão
+5. Ao finalizar, escreva o REPORT.md em _sessions/session-[N]_[nome]/
+6. Atualize o status em _sessions/_status.md
+
+# STATUS GERAL DO PROJETO
+**Projeto:** [NOME DO PROJETO]
+**Site original:** [URL do Webflow]
+**Última atualização:** [DATA]
+**Responsável:** [SEU NOME]
+
+---
+
+## VISÃO GERAL DAS SESSÕES
+
+| # | Sessão | Escopo | Agente Leitor | Agente Escritor | Status |
+|---|--------|--------|---------------|-----------------|--------|
+| 001 | Auditoria completa | Mapeamento total do site | Antigravity | — | 🔲 Pendente |
+| 002 | Hero Section | HTML + CSS + animação entrada | Antigravity | Codex | 🔲 Pendente |
+| 003 | Animações GSAP | ScrollTrigger + SplitText globais | Antigravity | Codex | 🔲 Pendente |
+| 004 | Seções internas | Demais seções do site | Antigravity | Codex | 🔲 Pendente |
+| 005 | Responsivo | Tablet + Mobile todos os breakpoints | Antigravity | Codex | 🔲 Pendente |
+| 006 | Revisão de paridade | Checklist final visual + funcional | Antigravity | Codex | 🔲 Pendente |
+
+**Legenda:** ✅ Concluída | ⚠️ Com problemas | 🔲 Pendente | 🔄 Em execução | ❌ Bloqueada
+
+---
+
+## BLOQUEIOS ATIVOS
+
+_Nenhum bloqueio no momento._
+
+---
+
+## DECISÕES GLOBAIS DO PROJETO
+
+> Decisões tomadas que valem para todas as sessões. Nunca contradiga estas regras.
+
+- [ ] Framework: [Next.js / Vanilla / outro]
+- [ ] Versão GSAP: [ex: 3.12.5]
+- [ ] Usar `useGSAP()` em todos os componentes React
+- [ ] `ScrollTrigger.refresh()` sempre após hydration do Next.js
+- [ ] Fontes carregadas via: [CDN / local / next/font]
+- [ ] CSS strategy: [Webflow CSS base + módulos / Tailwind / outro]
+
+---
+
+## RESUMO DE PROGRESSO
+
+**Sessões concluídas:** 0 / 6
+**Última sessão executada:** —
+**Próxima sessão:** 001 — Auditoria completa
+
+---
+
+## NOTAS GERAIS
+
+_Use este espaço para registrar observações que não se encaixam em nenhuma sessão específica._
+
+# REGRAS GLOBAIS — PARIDADE WEBFLOW
+> Leia este arquivo no início de TODA sessão, sem exceção.
+> Estas regras têm prioridade sobre qualquer outra instrução.
+
+---
+
+## 1. DEFINIÇÃO DE PARIDADE ABSOLUTA
+
+O resultado final deve ser **visualmente e funcionalmente indistinguível** do original em:
+- Layout e espaçamentos (desktop, tablet, mobile)
+- Tipografia (família, peso, tamanho, line-height, letter-spacing)
+- Cores exatas — nunca aproxime, copie o valor do CSS original
+- Animações (timing, easing, trigger points)
+- Comportamento de scroll
+- Estados hover / focus / active
+- Responsividade em todos os breakpoints do Webflow
+
+---
+
+## 2. REGRAS DE HTML
+
+### ✅ FAÇA
+- Preserve a estrutura de divs e classes do Webflow exatamente
+- Mantenha atributos `data-*` relevantes para scripts
+- Preserve a ordem dos elementos no DOM
+
+### ❌ NÃO FAÇA
+- Não renomeie classes sem necessidade
+- Não reorganize hierarquia para "ficar mais limpa"
+- Não remova divs "vazias" — existem para layout/animação
+- Não converta IDs para classes sem mapear todos os usos
+
+---
+
+## 3. REGRAS DE CSS
+
+### ✅ FAÇA
+- Copie o CSS do Webflow como base, não reescreva do zero
+- CSS customizado em arquivo separado, após o Webflow CSS
+- Use as mesmas unidades do original (rem, px, vw)
+- Preserve todos os breakpoints com valores exatos
+
+### ❌ NÃO FAÇA
+- Não normalize espaçamentos para múltiplos de 4
+- Não remova `!important` do CSS Webflow sem testar
+- Não assuma breakpoints — leia os @media do CSS original
+- Não troque `px` por `rem` sem calcular equivalência exata
+
+---
+
+## 4. REGRAS DE GSAP
+
+```js
+// Import correto
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+// ScrollTrigger SEMPRE na timeline, nunca em tween filho
+const tl = gsap.timeline({
+  scrollTrigger: { trigger: ".section", start: "top center" }
+});
+
+// SplitText com cleanup obrigatório
+const split = SplitText.create(".heading", { type: "words, chars" });
+// → split.revert() no unmount
+
+// React: sempre useGSAP() com scope
+import { useGSAP } from "@gsap/react";
+useGSAP(() => { /* animações */ }, { scope: containerRef });
+
+// Após mudanças de layout
+ScrollTrigger.refresh();
+
+// NUNCA deixe markers: true em produção
+```
+
+---
+
+## 5. BREAKPOINTS WEBFLOW
+
+| Nome | Largura |
+|------|---------|
+| Desktop | 1280px+ |
+| Tablet | 768px – 991px |
+| Mobile Landscape | 480px – 767px |
+| Mobile Portrait | até 479px |
+
+---
+
+## 6. ARMADILHAS COMUNS
+
+| Problema | Causa | Solução |
+|----------|-------|---------|
+| Layout quebrado | Divs wrapper removidas | Preserve toda estrutura de containers |
+| ScrollTrigger não dispara | Falta `refresh()` após layout | `ScrollTrigger.refresh()` |
+| Texto quebra no resize | SplitText sem revert+resplit | `ResizeObserver` com re-split |
+| Fontes com peso errado | Pesos diferentes no link | Copie o `<link>` exato do original |
+| Cores levemente diferentes | Aproximação de hex | Copie valores exatos do CSS |
+| IX2 não funciona | Depende do runtime Webflow | Reescreva 100% em GSAP |
+
+---
+
+## 7. FLUXO DE TRABALHO
+
+```
+Antigravity → lê arquivos → gera spec (tokens.md, animations.md)
+      ↓
+    Você → revisa spec → aprova
+      ↓
+    Codex → recebe spec da sessão → escreve código
+      ↓
+    Você → testa → aprova ou reporta bug
+      ↓
+    Codex → corrige → atualiza REPORT.md
+```
+
+---
+
+## 8. PROMPT DE INÍCIO DE SESSÃO
+
+Cole este prompt no início de cada sessão (Antigravity ou Codex):
+
+```
+Antes de executar qualquer tarefa:
+1. Leia _sessions/_rules/GLOBAL_RULES.md
+2. Leia _sessions/_rules/tokens.md (se existir)
+3. Leia _sessions/_rules/animations.md (se existir)
+4. Leia _sessions/_status.md
+5. Leia _sessions/session-[N]_[nome]/RULES.md desta sessão
+6. Execute APENAS o que está em escopo desta sessão
+7. Ao finalizar, escreva o REPORT.md desta sessão
+8. Atualize o status em _sessions/_status.md
+```
+
+markdown
+
+# TOKENS DO PROJETO
+> Gerado por: Antigravity — Session 001
+> Preencha este arquivo durante a auditoria inicial.
+> O Codex usa este arquivo como fonte única de verdade para valores visuais.
+---
+## CORES
+```css
+/* Cole aqui as variáveis CSS extraídas do :root do Webflow */
+--color-primary:     #000000;
+--color-secondary:   #000000;
+--color-accent:      #000000;
+--color-background:  #000000;
+--color-text:        #000000;
+--color-text-muted:  #000000;
+/* Gradientes */
+--gradient-hero: linear-gradient(135deg, #000 0%, #000 100%);
+```
+---
+## TIPOGRAFIA
+|
+ Elemento 
+|
+ Família 
+|
+ Peso 
+|
+ Tamanho 
+|
+ Line-height 
+|
+ Letter-spacing 
+|
+|
+----------
+|
+---------
+|
+------
+|
+---------
+|
+-------------
+|
+----------------
+|
+|
+ H1 
+|
+ — 
+|
+ — 
+|
+ —px 
+|
+ — 
+|
+ —em 
+|
+|
+ H2 
+|
+ — 
+|
+ — 
+|
+ —px 
+|
+ — 
+|
+ —em 
+|
+|
+ H3 
+|
+ — 
+|
+ — 
+|
+ —px 
+|
+ — 
+|
+ —em 
+|
+|
+ Body 
+|
+ — 
+|
+ — 
+|
+ —px 
+|
+ — 
+|
+ —em 
+|
+|
+ Small 
+|
+ — 
+|
+ — 
+|
+ —px 
+|
+ — 
+|
+ —em 
+|
+|
+ Label 
+|
+ — 
+|
+ — 
+|
+ —px 
+|
+ — 
+|
+ —em 
+|
+
+### Link de carregamento das fontes (copie exato do original)
+```html
+ exato do Google Fonts ou @font-face do original -->
+```
+---
+## ESPAÇAMENTOS RECORRENTES
+```
+Section padding vertical:  —px desktop / —px tablet / —px mobile
+Container max-width:        —px
+Container padding lateral:  —px desktop / —px tablet / —px mobile
+Grid gap:                   —px
+```
+---
+## BREAKPOINTS CONFIRMADOS
+|
+ Nome 
+|
+ Largura 
+|
+ Observação 
+|
+|
+------
+|
+---------
+|
+------------
+|
+|
+ Desktop 
+|
+ —px 
+|
+|
+|
+ Tablet 
+|
+ —px 
+|
+|
+|
+ Mobile L 
+|
+ —px 
+|
+|
+|
+ Mobile P 
+|
+ —px 
+|
+|
+
+---
+## SOMBRAS E BORDAS
+```css
+--shadow-card:  ;
+--shadow-hero:  ;
+--border-radius-sm: —px;
+--border-radius-md: —px;
+--border-radius-lg: —px;
+```
+---
+## TRANSIÇÕES CSS PADRÃO
+```css
+/* Transições usadas globalmente */
+transition: all —ms ease;
+/* ou */
+transition: opacity —ms ease, transform —ms ease;
+```
+---
+## Z-INDEX MAP
+|
+ Elemento 
+|
+ z-index 
+|
+|
+----------
+|
+---------
+|
+|
+ Nav 
+|
+ — 
+|
+|
+ Modal 
+|
+ — 
+|
+|
+ Overlay 
+|
+ — 
+|
+|
+ Tooltip 
+|
+ — 
+|

@@ -1,0 +1,12 @@
+﻿node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+.vscode/
+.idea/
+*.log
+SITE-COPYCENTER/node_modules/
+SITE-COPYCENTER/dist/
+SITE-COPYCENTER/.env
+SITE-COPYCENTER/.env.local
