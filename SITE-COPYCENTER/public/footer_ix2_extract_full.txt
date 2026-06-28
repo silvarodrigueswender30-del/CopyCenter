@@ -1,0 +1,187 @@
+                                easing: "",
+                                duration: 0,
+                                actionListId: "a-4",
+                                affectedElements: {},
+                                playInReverse: !1,
+                                autoStopEventId: "e-401"
+                            }
+                        },
+                        mediaQueries: ["main", "medium", "small", "tiny"],
+                        target: {
+                            id: "b6def29d-75e6-ec68-bf55-d4183e570274",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        },
+                        targets: [{
+                            id: "b6def29d-75e6-ec68-bf55-d4183e570274",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        }],
+                        config: {
+                            loop: !1,
+                            playInReverse: !1,
+                            scrollOffsetValue: 0,
+                            scrollOffsetUnit: "%",
+                            delay: null,
+                            direction: null,
+                            effectIn: null
+                        },
+                        createdOn: 0x199c0a4748c
+                    },
+                    "e-402": {
+                        id: "e-402",
+                        name: "",
+                        animationType: "custom",
+                        eventTypeId: "SCROLL_INTO_VIEW",
+
+---
+
+                                autoStopEventId: "e-401"
+                            }
+                        },
+                        mediaQueries: ["main", "medium", "small", "tiny"],
+                        target: {
+                            id: "b6def29d-75e6-ec68-bf55-d4183e570274",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        },
+                        targets: [{
+                            id: "b6def29d-75e6-ec68-bf55-d4183e570274",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        }],
+                        config: {
+                            loop: !1,
+                            playInReverse: !1,
+                            scrollOffsetValue: 0,
+                            scrollOffsetUnit: "%",
+                            delay: null,
+                            direction: null,
+                            effectIn: null
+                        },
+                        createdOn: 0x199c0a4748c
+                    },
+                    "e-402": {
+                        id: "e-402",
+                        name: "",
+                        animationType: "custom",
+                        eventTypeId: "SCROLL_INTO_VIEW",
+                        action: {
+                            id: "",
+                            actionTypeId: "GENERAL_START_ACTION",
+                            config: {
+                                delay: 0,
+
+---
+
+                            id: "b6def29d-75e6-ec68-bf55-d4183e570274",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        },
+                        targets: [{
+                            id: "b6def29d-75e6-ec68-bf55-d4183e570274",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        }],
+                        config: {
+                            loop: !1,
+                            playInReverse: !1,
+                            scrollOffsetValue: 0,
+                            scrollOffsetUnit: "%",
+                            delay: null,
+                            direction: null,
+                            effectIn: null
+                        },
+                        createdOn: 0x199c0a4748c
+                    },
+                    "e-402": {
+                        id: "e-402",
+                        name: "",
+                        animationType: "custom",
+                        eventTypeId: "SCROLL_INTO_VIEW",
+                        action: {
+                            id: "",
+                            actionTypeId: "GENERAL_START_ACTION",
+                            config: {
+                                delay: 0,
+                                easing: "",
+                                duration: 0,
+                                actionListId: "a-59",
+                                affectedElements: {},
+                                playInReverse: !1,
+
+---
+
+                            direction: null,
+                            effectIn: null
+                        },
+                        createdOn: 0x199c0a4748c
+                    },
+                    "e-402": {
+                        id: "e-402",
+                        name: "",
+                        animationType: "custom",
+                        eventTypeId: "SCROLL_INTO_VIEW",
+                        action: {
+                            id: "",
+                            actionTypeId: "GENERAL_START_ACTION",
+                            config: {
+                                delay: 0,
+                                easing: "",
+                                duration: 0,
+                                actionListId: "a-59",
+                                affectedElements: {},
+                                playInReverse: !1,
+                                autoStopEventId: "e-403"
+                            }
+                        },
+                        mediaQueries: ["main", "medium", "small", "tiny"],
+                        target: {
+                            id: "68c7fc532c18bd4c19f842b8|00b9aae3-11e7-03bc-2138-5346907726df",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        },
+                        targets: [{
+                            id: "68c7fc532c18bd4c19f842b8|00b9aae3-11e7-03bc-2138-5346907726df",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        }],
+                        config: {
+
+---
+
+                            effectIn: null
+                        },
+                        createdOn: 0x199c0a4748c
+                    },
+                    "e-402": {
+                        id: "e-402",
+                        name: "",
+                        animationType: "custom",
+                        eventTypeId: "SCROLL_INTO_VIEW",
+                        action: {
+                            id: "",
+                            actionTypeId: "GENERAL_START_ACTION",
+                            config: {
+                                delay: 0,
+                                easing: "",
+                                duration: 0,
+                                actionListId: "a-59",
+                                affectedElements: {},
+                                playInReverse: !1,
+                                autoStopEventId: "e-403"
+                            }
+                        },
+                        mediaQueries: ["main", "medium", "small", "tiny"],
+                        target: {
+                            id: "68c7fc532c18bd4c19f842b8|00b9aae3-11e7-03bc-2138-5346907726df",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        },
+                        targets: [{
+                            id: "68c7fc532c18bd4c19f842b8|00b9aae3-11e7-03bc-2138-5346907726df",
+                            appliesTo: "ELEMENT",
+                            styleBlockIds: []
+                        }],
+                        config: {
+                            loop: !1,

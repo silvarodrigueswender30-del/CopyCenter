@@ -9,6 +9,7 @@ import { initServiceMotion } from "./scripts/serviceMotion.js";
 import { initTestimonialMotion } from "./scripts/testimonialMotion.js";
 import { initBlogMotion } from "./scripts/blogMotion.js";
 import { initCtaMotion } from "./scripts/ctaMotion.js";
+import { initFooterMotion } from "./scripts/footerMotion.js";
 
 export default function App() {
   const [html, setHtml] = useState("");
@@ -127,6 +128,7 @@ export default function App() {
         initTestimonialMotion(document),
         initBlogMotion(document),
         initCtaMotion(document),
+        initFooterMotion(document),
       ];
       cleanup = () => {
         cleanups.forEach((cleanupItem) => cleanupItem());
