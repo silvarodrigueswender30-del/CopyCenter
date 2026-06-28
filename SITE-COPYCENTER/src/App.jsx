@@ -55,13 +55,19 @@ export default function App() {
         }
         return response.text();
       }),
+      fetch("/info.html").then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load Info markup: ${response.status}`);
+        }
+        return response.text();
+      }),
     ])
-      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup]) => {
+      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup]) => {
         if (isMounted) {
           setHtml(
             headerHeroMarkup.replace(
               "</main>",
-              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n    </main>`,
+              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n    </main>`,
             ),
           );
         }
