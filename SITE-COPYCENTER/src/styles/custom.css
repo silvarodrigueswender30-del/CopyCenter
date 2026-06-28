@@ -196,6 +196,14 @@ html:not(.info-motion-ready) .section_info .home-info_card {
   transform: none !important;
 }
 
+/* Session 010: static fallback — neutralize IX2 invisible states for section_testimonial. */
+html:not(.motion-ready) .section_testimonial h2,
+html.motion-ready .section_testimonial h2 {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
 @keyframes copycenter-logo-marquee {
   from {
     transform: translate3d(0, 0, 0);

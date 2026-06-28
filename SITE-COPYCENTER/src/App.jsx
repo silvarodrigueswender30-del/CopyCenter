@@ -62,13 +62,19 @@ export default function App() {
         }
         return response.text();
       }),
+      fetch("/testimonial.html").then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load Testimonial markup: ${response.status}`);
+        }
+        return response.text();
+      }),
     ])
-      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup]) => {
+      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup, testimonialMarkup]) => {
         if (isMounted) {
           setHtml(
             headerHeroMarkup.replace(
               "</main>",
-              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n    </main>`,
+              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n${testimonialMarkup}\n    </main>`,
             ),
           );
         }
