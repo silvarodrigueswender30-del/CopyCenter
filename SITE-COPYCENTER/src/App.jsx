@@ -76,13 +76,19 @@ export default function App() {
         }
         return response.text();
       }),
+      fetch("/cta.html").then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load CTA markup: ${response.status}`);
+        }
+        return response.text();
+      }),
     ])
-      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup, testimonialMarkup, blogMarkup]) => {
+      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup, testimonialMarkup, blogMarkup, ctaMarkup]) => {
         if (isMounted) {
           setHtml(
             headerHeroMarkup.replace(
               "</main>",
-              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n${testimonialMarkup}\n${blogMarkup}\n    </main>`,
+              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n${testimonialMarkup}\n${blogMarkup}\n${ctaMarkup}\n    </main>`,
             ),
           );
         }
