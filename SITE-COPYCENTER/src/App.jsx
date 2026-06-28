@@ -6,6 +6,7 @@ import { initMobileNav } from "./scripts/mobileNav.js";
 import { initProcessMotion } from "./scripts/processMotion.js";
 import { initScrollTextMotion } from "./scripts/scrollTextMotion.js";
 import { initServiceMotion } from "./scripts/serviceMotion.js";
+import { initTestimonialMotion } from "./scripts/testimonialMotion.js";
 
 export default function App() {
   const [html, setHtml] = useState("");
@@ -68,13 +69,19 @@ export default function App() {
         }
         return response.text();
       }),
+      fetch("/blog.html").then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load Blog markup: ${response.status}`);
+        }
+        return response.text();
+      }),
     ])
-      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup, testimonialMarkup]) => {
+      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup, testimonialMarkup, blogMarkup]) => {
         if (isMounted) {
           setHtml(
             headerHeroMarkup.replace(
               "</main>",
-              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n${testimonialMarkup}\n    </main>`,
+              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n${testimonialMarkup}\n${blogMarkup}\n    </main>`,
             ),
           );
         }
@@ -103,6 +110,7 @@ export default function App() {
         initProcessMotion(document),
         initAboutCountingMotion(document),
         initInfoMotion(document),
+        initTestimonialMotion(document),
       ];
       cleanup = () => {
         cleanups.forEach((cleanupItem) => cleanupItem());

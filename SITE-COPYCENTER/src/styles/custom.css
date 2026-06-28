@@ -197,8 +197,16 @@ html:not(.info-motion-ready) .section_info .home-info_card {
 }
 
 /* Session 010: static fallback — neutralize IX2 invisible states for section_testimonial. */
-html:not(.motion-ready) .section_testimonial h2,
-html.motion-ready .section_testimonial h2 {
+html:not(.testimonial-motion-ready) .section_testimonial h2,
+html:not(.testimonial-motion-ready) .section_testimonial .home-testimonial_item {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* Session 011: static fallback — neutralize IX2 invisible states for section_blog header. */
+html:not(.motion-ready) .section_blog .section_header,
+html.motion-ready .section_blog .section_header {
   opacity: 1 !important;
   filter: none !important;
   transform: none !important;
