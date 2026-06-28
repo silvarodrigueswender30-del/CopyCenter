@@ -49,13 +49,19 @@ export default function App() {
         }
         return response.text();
       }),
+      fetch("/video.html").then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load Video markup: ${response.status}`);
+        }
+        return response.text();
+      }),
     ])
-      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup]) => {
+      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup]) => {
         if (isMounted) {
           setHtml(
             headerHeroMarkup.replace(
               "</main>",
-              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n    </main>`,
+              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n    </main>`,
             ),
           );
         }

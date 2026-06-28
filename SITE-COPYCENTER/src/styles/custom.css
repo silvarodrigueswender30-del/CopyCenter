@@ -177,6 +177,16 @@ html:not(.process-motion-ready) .section_process .process_component {
   }
 }
 
+/* Session 008: static fallback — neutralize IX2 invisible states for section_video. */
+html:not(.motion-ready) .section_video .info-video_wrap,
+html:not(.motion-ready) .section_video .info-video_title,
+html.motion-ready .section_video .info-video_wrap,
+html.motion-ready .section_video .info-video_title {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
 @keyframes copycenter-logo-marquee {
   from {
     transform: translate3d(0, 0, 0);
