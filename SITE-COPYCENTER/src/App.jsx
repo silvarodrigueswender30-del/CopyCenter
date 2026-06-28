@@ -83,13 +83,19 @@ export default function App() {
         }
         return response.text();
       }),
+      fetch("/footer.html").then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load Footer markup: ${response.status}`);
+        }
+        return response.text();
+      }),
     ])
-      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup, testimonialMarkup, blogMarkup, ctaMarkup]) => {
+      .then(([headerHeroMarkup, logoMarkup, contentMarkup, servicesMarkup, processMarkup, aboutMarkup, videoMarkup, infoMarkup, testimonialMarkup, blogMarkup, ctaMarkup, footerMarkup]) => {
         if (isMounted) {
           setHtml(
             headerHeroMarkup.replace(
               "</main>",
-              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n${testimonialMarkup}\n${blogMarkup}\n${ctaMarkup}\n    </main>`,
+              `${logoMarkup}\n${contentMarkup}\n${servicesMarkup}\n${processMarkup}\n${aboutMarkup}\n${videoMarkup}\n${infoMarkup}\n${testimonialMarkup}\n${blogMarkup}\n${ctaMarkup}\n    </main>\n${footerMarkup}`,
             ),
           );
         }
