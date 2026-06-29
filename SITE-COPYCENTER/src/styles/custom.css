@@ -221,3 +221,10 @@ html:not(.blog-motion-ready) .section_blog .collection-blogs_item {
     transform: translate3d(-50%, 0, 0);
   }
 }
+
+/* Session 015.2: Hero desktop CTA position calibration */
+@media screen and (min-width: 992px) {
+  .section_hero .button-group.home-header {
+    margin-bottom: clamp(32px, 4vw, 64px);
+  }
+}
