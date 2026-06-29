@@ -69,3 +69,7 @@ Orquestrador deve validar o REPORT.md da Session 007 antes de liberar a prÃ³xima
 - Session 017.5A (Testimonials + Blog + CTA + Footer Technical Copy Audit): CONCLUÍDA. Relatório de auditoria gerado.
 
 - Session 016.2 (CopyCenter Local Data Validation Update): CONCLUÍDA. Relatórios de SEO e dados locais gerados.
+
+- Session 017.5B (Content Swap Testimonials + Blog): CONCLUÍDA. Textos inseridos protegendo integridade estrutural e SEO.
+
+- Session 017.5B.1 (Testimonials + Blog Visual QA Fix): CONCLUÍDA. Placeholders literais substituídos e título corrigido de forma segura.
