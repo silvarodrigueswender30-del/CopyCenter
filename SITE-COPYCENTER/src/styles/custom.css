@@ -228,3 +228,61 @@ html:not(.blog-motion-ready) .section_blog .collection-blogs_item {
     margin-bottom: clamp(32px, 4vw, 64px);
   }
 }
+
+/* Session 020-B: Process desktop calibration — padding, sticky top, card height.
+   Restricted to min-width:992px only. Mobile/tablet (≤991px) NOT affected.
+   processMotion.js NOT altered. */
+@media screen and (min-width: 992px) {
+  .section_process .section-padding.padding-160x160 {
+    padding-top: clamp(80px, 7vh, 110px);
+  }
+
+  html.process-motion-ready .section_process .process_info,
+  html.process-motion-ready .section_process .process-image_list {
+    top: clamp(40px, 4vh, 56px);
+    height: clamp(460px, 64vh, 640px);
+  }
+
+  .section_process .margin-bottom.margin-60 {
+    margin-bottom: clamp(32px, 4vh, 48px);
+  }
+}
+
+/* Session 020-C: Process desktop low-viewport fix
+   Corrige notebooks/desktops com pouca altura sem tocar mobile/tablet.
+   Deve ficar após as regras anteriores do Process para vencer o cascade. */
+@media screen and (min-width: 992px) and (max-height: 850px) {
+  .section_process .section-padding.padding-160x160 {
+    padding-top: clamp(48px, 5vh, 72px);
+    padding-bottom: clamp(80px, 8vh, 120px);
+  }
+
+  .section_process .process_element {
+    top: clamp(20px, 3vh, 40px);
+  }
+
+  html.process-motion-ready .section_process .process_info,
+  html.process-motion-ready .section_process .process-image_list {
+    top: clamp(20px, 3vh, 40px);
+    height: clamp(420px, 58vh, 540px);
+  }
+
+  .section_process .margin-bottom.margin-60 {
+    margin-bottom: clamp(20px, 3vh, 32px);
+  }
+
+  .section_process .process-info_content-title {
+    padding-top: clamp(18px, 2vh, 24px);
+    padding-bottom: clamp(14px, 2vh, 18px);
+  }
+
+  .section_process .process-info_content-divider {
+    margin-top: clamp(10px, 1.5vh, 16px);
+    margin-bottom: clamp(18px, 2.5vh, 28px);
+  }
+
+  .section_process .process-info_tags-block {
+    height: clamp(82px, 11vh, 96px);
+  }
+}
+
