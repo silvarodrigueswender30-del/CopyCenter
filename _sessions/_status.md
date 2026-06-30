@@ -79,3 +79,5 @@ Orquestrador deve validar o REPORT.md da Session 007 antes de liberar a prÃ³xima
 - Session 017.5C-B (Content Swap CTA Final): CONCLUÍDA. Textos inseridos protegendo integridade estrutural e animações.
 
 - Session 017.5D-A (Footer Technical Copy Audit): CONCLUÍDA. Auditoria mapeou a seção para futura inclusão do Footer.
+
+- Session 017.5D-B (Footer Content Swap): CONCLUÍDA. Textos inseridos protegendo integridade estrutural. NAP omitido intencionalmente.
