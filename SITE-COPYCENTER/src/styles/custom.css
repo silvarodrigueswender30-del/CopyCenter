@@ -286,3 +286,25 @@ html:not(.blog-motion-ready) .section_blog .collection-blogs_item {
   }
 }
 
+/* Session 020-D: Process desktop step tags refinement
+   Garante que os labels "1. Envie a demanda / 2. Valide detalhes / 3. Material pronto"
+   caibam em uma linha e fiquem bem distribuídos.
+   Escopo: apenas .section_process, apenas desktop (min-width:992px). */
+@media screen and (min-width: 992px) {
+  .section_process .process-info_tags-list {
+    justify-content: space-between;
+    gap: clamp(14px, 2vw, 32px);
+  }
+
+  .section_process .process-info_tags-item {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-height: 850px) {
+  .section_process .process-info_tags-item {
+    font-size: clamp(11px, 0.85vw, 13px);
+  }
+}
+
+
